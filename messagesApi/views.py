@@ -76,6 +76,7 @@ def UnreadmessagesList(request):
 
 @api_view(['POST'])
 def writeMessage(request):
+    print(request.data)
     serializer = MessageSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save()
