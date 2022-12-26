@@ -13,7 +13,6 @@ class MessageSerializer(serializers.ModelSerializer):
         queryset=User.objects.all()
     )
     
-    
     class Meta:
         model = Message
         fields = ['id','sender','receiver' ,'message','subject','creationDate'] 
