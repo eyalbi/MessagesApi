@@ -10,6 +10,5 @@ class Message(models.Model):
     creationDate = models.DateTimeField(default=datetime.datetime.now, blank=True)
     HasBeenRead = models.BooleanField(default=False)
     
-
     def __str__(self):
         return "Message - {} :from {} to {} - {}".format(self.id,self.sender,self.receiver,self.subject)
