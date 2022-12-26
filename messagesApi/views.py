@@ -32,6 +32,11 @@ def logoutUser(request):
     return JsonResponse({'Message':'User Logedout' })
 
 
+@api_view(['GET'])
+def api(request):
+    return JsonResponse({'Message':"Welcome to messages Api"},status = status.HTTP_200_OK)
+
+
 @staff_required(login_url="../admin")
 @api_view(['GET'])
 def getAllUsers(request):

@@ -4,6 +4,7 @@ from messagesApi import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path('',views.api),
     path("login/", views.loginUser,name='login'),
     path("logout/", views.logoutUser),
     path("getusers/",views.getAllUsers),
